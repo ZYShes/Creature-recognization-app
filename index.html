@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>EarthWare</title>
+    <script type="text/javascript" src="lib/axios/dist/axios.standalone.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/hmac-sha256.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/sha256.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/hmac.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/enc-base64.js"></script>
+    <script type="text/javascript" src="lib/url-template/url-template.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/sigV4Client.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/apiGatewayClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
+    <script type="text/javascript" src="apigClient.js"></script>
+    <script type="text/javascript" src="earthWareLib.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body onload="afterLoadConfig()">
+    <div class="container">
+      <h1 class="title">Photo Upload Portal</h1>
+      <p>Upload your photo. Maximum file size is 5MB.</p>
+      <form id="photoForm" enctype="multipart/form-data">
+          <input id="fileInput" name="file" type="file" accept="image/png, image/jpeg" />
+          <button type="button" id="fileSubmit" class="button" onclick="recPhoto('fileInput')">Upload Photo</button>
+      </form>
+      <div id="labelsResult"> The creature in picture would be: </div>
+  </div>
+  <script src="earthWareLib.js"></script>
+</html>
